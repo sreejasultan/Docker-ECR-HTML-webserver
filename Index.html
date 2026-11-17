@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First DevOps Website</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            text-align: center;
+            color: #172b4d;
+        }
+
+        header {
+            background-color: #2860e8;
+            color: white;
+            padding: 35px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 25px;
+        }
+
+        .container {
+            padding: 60px 20px;
+        }
+
+        .container h2 {
+            font-size: 38px;
+        }
+
+        .container p {
+            font-size: 22px;
+        }
+
+        button {
+            background-color: #16833d;
+            color: white;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0d612c;
+        }
+
+        #message {
+            color: green;
+            font-size: 23px;
+            font-weight: bold;
+            margin-top: 25px;
+        }
+
+        #time {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My First DevOps Website</h1>
+        <p>Welcome to My Application</p>
+    </header>
+
+    <div class="container">
+
+        <h2>Hello! Welcome to My Website</h2>
+
+        <p>This application is deployed using Docker.</p>
+
+        <p>Practising Jenkins, GitHub, CI/CD and AWS.</p>
+
+        <button onclick="showMessage()">
+            Click Here
+        </button>
+
+        <div id="message"></div>
+
+        <p id="time"></p>
+
+    </div>
+
+    <script>
+
+        // Button functionality
+        function showMessage() {
+            document.getElementById("message").innerHTML =
+            "Congratulations! Your application is running successfully!";
+        }
+
+        // Live date and time
+        function updateTime() {
+            let now = new Date();
+
+            document.getElementById("time").innerHTML =
+            "Current Time: " + now.toLocaleString();
+        }
+
+        updateTime();
+
+        setInterval(updateTime, 1000);
+
+    </script>
+
+</body>
+</html>
